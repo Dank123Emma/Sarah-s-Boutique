@@ -49,6 +49,8 @@ sarahs-electronics/
 This project is licensed under the MIT License. See the LICENSE file for details.
 
 ## Author
-- Emmanuel Junior Dankwah  
-- Lawrence Nii Armah  
-- Email: dankwahjuniore@gmail.com
+- Emmanuel Junior Dankwah & Lawrence Nii Armah  
+- Email: dankwahjuniore@gmail.com & niiarmahlawrence3@gmail.com
+
+## Live Pages
+https://dank123emma.github.io/Sarah-s-Electronics
