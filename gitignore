@@ -1,0 +1,25 @@
+.DS_Store
+Thumbs.db
+*.log
+
+# IDE / Editor
+.vscode/
+.idea/
+*.code-workspace
+
+# Dependencies (if added later)
+node_modules/
+package-lock.json
+
+# Build outputs
+dist/
+build/
+
+# Environment / Config files
+.env
+*.local
+
+# Backups / Caches
+*.bak
+*.tmp
+.cache/
