@@ -1,0 +1,116 @@
+@import url('index.css');
+
+.cart-section {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.cart-item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+.cart-item img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.cart-item h4 {
+    flex: 1;
+    font-size: 1.1rem;
+    color: #111;
+}
+.cart-item p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0 1rem;
+}
+.cart-item button.remove-btn {
+    padding: 0.5rem 1rem;
+    background: #ff4d4d;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+.cart-item button.remove-btn:hover {
+    background: #e63b3b;
+}
+
+.cart-total {
+    margin-top: 2rem;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
+}
+.cart-total h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+.cart-total .checkout-button {
+    padding: 0.8rem 2rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+.cart-total .checkout-button:hover {
+    background-color: #218838;
+}
+
+.empty-cart {
+    text-align: center;
+    padding: 3rem;
+    color: #777;
+}
+.empty-cart h2 {
+    margin-bottom: 1rem;
+}
+.empty-cart p {
+    margin-bottom: 2rem;
+}
+.empty-cart a {
+    padding: 0.75rem 1.5rem;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+.empty-cart a:hover {
+    background-color: #0069d9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .cart-item img {
+        width: 100%;
+        height: auto;
+    }
+    .cart-total {
+        align-items: flex-start;
+        text-align: left;
+    }
+}

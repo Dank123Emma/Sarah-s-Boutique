@@ -1,0 +1,517 @@
+@import url('index.css');
+
+.checkout-section {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+}
+.checkout-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.checkout-section input {
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.checkout-section button {
+    padding: 0.8rem;
+    background: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.checkout-section button:hover {
+    background: #218838;
+}
+.checkout-section h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.checkout-section .summary {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+}
+.checkout-section .summary span {
+    color: #28a745;
+}
+.checkout-section .error {
+    color: #dc3545;
+    font-size: 0.9rem;
+    margin-top: -0.5rem;
+}
+.checkout-section .success {
+    color: #28a745;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+.checkout-section .loading {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+.checkout-section .loading::after {
+    content: '...';
+    animation: dots 1s steps(3, end) infinite;
+}
+@keyframes dots {
+    0%, 20% {
+        content: '';
+    }
+    40% {
+        content: '.';
+    }
+    60% {
+        content: '..';
+    }
+    80%, 100% {
+        content: '...';
+    }
+}
+.checkout-section .note {
+    font-size: 0.9rem;
+    color: #6c757d;
+    text-align: center;
+    margin-top: 1rem;
+}
+.checkout-section .note a {
+    color: #007bff;
+    text-decoration: none;
+}
+.checkout-section .note a:hover {
+    text-decoration: underline;
+}
+@media (max-width: 600px) {
+    .checkout-section {
+        padding: 1rem;
+        margin: 1rem;
+    }
+}
+.checkout-section input:focus {
+    border-color: #80bdff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+.checkout-section button:disabled {
+    background: #6c757d;
+    cursor: not-allowed;
+}
+.checkout-section .terms {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+.checkout-section .terms input {
+    width: auto;
+}
+.checkout-section .terms a {
+    color: #007bff;
+    text-decoration: none;
+}
+.checkout-section .terms a:hover {
+    text-decoration: underline;
+}
+.checkout-section .coupon {
+    display: flex;
+    gap: 0.5rem;
+}
+.checkout-section .coupon input {
+    flex: 1;
+}
+.checkout-section .coupon button {
+    padding: 0.7rem 1rem;
+    background: #17a2b8;
+}
+.checkout-section .coupon button:hover {
+    background: #138496;
+}
+.checkout-section .applied-coupon {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #28a745;
+    text-align: center;
+}
+.checkout-section .applied-coupon button {
+    background: transparent;
+    border: none;
+    color: #dc3545;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+}
+.checkout-section .applied-coupon button:hover {
+    text-decoration: underline;
+}
+.checkout-section .payment-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.checkout-section .payment-methods label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+}
+.checkout-section .payment-methods input {
+    width: auto;
+}
+.checkout-section .payment-methods input:checked + span {
+    font-weight: bold;
+}
+.checkout-section .gift-option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+.checkout-section .gift-option input {
+    width: auto;
+}
+.checkout-section .gift-message {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.checkout-section .gift-message textarea {
+    width: 100%;
+    height: 80px;
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+}
+.checkout-section .gift-message textarea:focus {
+    border-color: #80bdff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+.checkout-section .order-review {
+    margin-top: 2rem;
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+}
+.checkout-section .order-review h3 {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.checkout-section .order-review ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.checkout-section .order-review ul li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+.checkout-section .order-review ul li.total {
+    font-weight: bold;
+    border-top: 1px solid #ccc;
+    padding-top: 0.5rem;
+}
+.checkout-section .order-review ul li.total span {
+    color: #28a745;
+}
+.checkout-section .promo-message {
+    font-size: 0.9rem;
+    color: #17a2b8;
+    text-align: center;
+    margin-top: 1rem;
+}
+.checkout-section .promo-message a {
+    color: #007bff;
+    text-decoration: none;
+}
+.checkout-section .promo-message a:hover {
+    text-decoration: underline;
+}
+.checkout-section .contact-info {
+    font-size: 0.9rem;
+    color: #6c757d;
+    text-align: center;
+    margin-top: 1rem;
+}
+.checkout-section .contact-info a {
+    color: #007bff;
+    text-decoration: none;
+}
+.checkout-section .contact-info a:hover {
+    text-decoration: underline;
+}
+.checkout-section .thank-you {
+    font-size: 1.2rem;
+    color: #28a745;
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+.checkout-section .thank-you span {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #6c757d;
+    font-weight: normal;
+}
+.checkout-section .thank-you span a {
+    color: #007bff;
+    text-decoration: none;
+}
+.checkout-section .thank-you span a:hover {
+    text-decoration: underline;
+}
+.checkout-section .feedback {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+.checkout-section .feedback a {
+    color: #007bff;
+    text-decoration: none;
+}
+.checkout-section .feedback a:hover {
+    text-decoration: underline;
+}
+.checkout-section .social-share {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+.checkout-section .social-share a {
+    margin: 0 0.5rem;
+    color: #007bff;
+    text-decoration: none;
+}
+.checkout-section .social-share a:hover {
+    text-decoration: underline;
+}
+.checkout-section .social-share a i {
+    font-size: 1.5rem;
+}
+.checkout-section .order-id {
+    font-size: 0.9rem;
+    color: #6c757d;
+    text-align: center;
+    margin-top: 1rem;
+}
+.checkout-section .order-id span {
+    font-weight: bold;
+    color: #343a40;
+}
+.checkout-section .delivery-estimate {
+    font-size: 0.9rem;
+    color: #6c757d;
+    text-align: center;
+    margin-top: 1rem;
+}
+.checkout-section .delivery-estimate span {
+    font-weight: bold;
+    color: #343a40;
+}
+.checkout-section .help-link {
+    font-size: 0.9rem;
+    color: #6c757d;
+    text-align: center;
+    margin-top: 1rem;
+}
+.checkout-section .help-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+.checkout-section .help-link a:hover {
+    text-decoration: underline;
+}
+.checkout-section .referral {
+    font-size: 0.9rem;
+    color: #6c757d;
+    text-align: center;
+    margin-top: 1rem;
+}
+.checkout-section .referral a {
+    color: #007bff;
+    text-decoration: none;
+}
+.checkout-section .referral a:hover {
+    text-decoration: underline;
+}
+.checkout-section .referral-code {
+    font-weight: bold;
+    color: #343a40;
+}
+.checkout-section .referral-code span {
+    margin-left: 0.5rem;
+}
+.checkout-section .special-instructions {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.checkout-section .special-instructions textarea {
+    width: 100%;
+    height: 60px;
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+}
+.checkout-section .special-instructions textarea:focus {
+    border-color: #80bdff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+.checkout-section .order-updates {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+.checkout-section .order-updates input {
+    width: auto;
+}
+.checkout-section .order-updates a {
+    color: #007bff;
+    text-decoration: none;
+}
+.checkout-section .order-updates a:hover {
+    text-decoration: underline;
+}
+.checkout-section .privacy-policy {
+    font-size: 0.8rem;
+    color: #6c757d;
+    text-align: center;
+    margin-top: 1rem;
+}
+.checkout-section .privacy-policy a {
+    color: #007bff;
+    text-decoration: none;
+}
+.checkout-section .privacy-policy a:hover {
+    text-decoration: underline;
+}
+.checkout-section .brand-logo {
+    display: block;
+    margin: 0 auto 1.5rem auto;
+    max-width: 150px;
+}
+.checkout-section .brand-logo img {
+    width: 100%;
+    height: auto;
+}
+.checkout-section .secure-checkout {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: #28a745;
+    margin-top: 1rem;
+}
+.checkout-section .secure-checkout i {
+    font-size: 1.2rem;
+}
+.checkout-section .secure-checkout a {
+    color: #007bff;
+    text-decoration: none;
+}
+.checkout-section .secure-checkout a:hover {
+    text-decoration: underline;
+}
+.checkout-section .final-note {
+    font-size: 0.9rem;
+    color: #6c757d;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+.checkout-section .final-note a {
+    color: #007bff;
+    text-decoration: none;
+}
+.checkout-section .final-note a:hover {
+    text-decoration: underline;
+}
+.checkout-section .thank-you-message {
+    font-size: 1.1rem;
+    color: #28a745;
+    text-align: center;
+    margin-top: 1.5rem;
+    font-weight: bold;
+}
+.checkout-section .thank-you-message span {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #6c757d;
+    font-weight: normal;
+}
+.checkout-section .thank-you-message span a {
+    color: #007bff;
+    text-decoration: none;
+}
+.checkout-section .thank-you-message span a:hover {
+    text-decoration: underline;
+}
+.checkout-section .order-confirmation {
+    font-size: 1rem;
+    color: #343a40;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+.checkout-section .order-confirmation span {
+    font-weight: bold;
+}
+.checkout-section .order-confirmation span a {
+    color: #007bff;
+    text-decoration: none;
+}
+.checkout-section .order-confirmation span a:hover {
+    text-decoration: underline;
+}
+.checkout-section .customer-support {
+    font-size: 0.9rem;
+    color: #6c757d;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+.checkout-section .customer-support a {
+    color: #007bff;
+    text-decoration: none;
+}
+.checkout-section .customer-support a:hover {
+    text-decoration: underline;
+}
+.checkout-section .follow-us {
+    font-size: 0.9rem;
+    color: #6c757d;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+.checkout-section .follow-us a {
+    color: #007bff;
+    text-decoration: none;
+}
+.checkout-section .follow-us a:hover {
+    text-decoration: underline;
+}
+.checkout-section .follow-us a i {
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+}
+.checkout-section .delivery-tracking {
+    font-size: 0.9rem;
+    color: #6c757d;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+.checkout-section .delivery-tracking a {
+    color: #007bff;
+    text-decoration: none;
+}
